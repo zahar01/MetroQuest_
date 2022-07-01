@@ -36,6 +36,7 @@ dependencies:
   cupertino_icons: ^1.0.2
   arcore_flutter_plugin: ^0.0.2+2
   geolocator: ^8.2.1
+  screens: ^2.5.0
 
 dev_dependencies:
   flutter_test:
@@ -60,6 +61,13 @@ flutter:
     - img/right-arrow.png
     - img/earth.jpg
     - img/hehe.jpg
+    - img/loading1.gif
+    - img/loading2.gif
+    - img/loading3.gif
+    - img/earth_augmented_image.jpg
+    - img/step1.jpg
+    - img/step2.jpg
+    - img/step3.jpg
   # The following line ensures that the Material Icons font is
   # included with your application, so that you can use the icons in
   # the material Icons class.

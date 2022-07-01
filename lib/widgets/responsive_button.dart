@@ -5,7 +5,8 @@ import 'package:myapp/misc/colors.dart';
 import 'package:myapp/widgets/alert.dart';
 
 import '../ar_files/image_object.dart';
-import '../geoposition/geopos.dart';
+import 'geopos.dart';
+import '../pages/geoposition_waiting.dart';
 
 class ResponsiveButton extends StatelessWidget {
   bool? isResponsive;
@@ -31,13 +32,13 @@ class ResponsiveButton extends StatelessWidget {
         ]),
       ),
       onTap: () {
-        getCurrentPosition();
-
         // if (pos.lat < 60.0061 && pos.long < 30.29) {
         //   Alert().build(context);
         // } else {}
-        // !!!!Navigator.of(context).push(
-        //           MaterialPageRoute(builder: (context) => ImageObjectScreen()));
+        Navigator.of(context).push(
+                  MaterialPageRoute(builder: (context) => GeopositionWaiting()));
+        
+        
       },
     );
   }

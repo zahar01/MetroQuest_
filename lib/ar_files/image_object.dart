@@ -10,7 +10,7 @@ class ImageObjectScreen extends StatefulWidget {
 
 class _ImageObjectScreenState extends State<ImageObjectScreen> {
   ArCoreController? arCoreController;
-
+  
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -32,16 +32,16 @@ class _ImageObjectScreenState extends State<ImageObjectScreen> {
   }
 
   Future _addImage(ArCoreHitTestResult hit) async {
-    final bytes =
-        (await rootBundle.load('img/hehe.jpg')).buffer.asUint8List();
+    
+    final bytes = (await rootBundle.load('img/hehe.jpg')).buffer.asUint8List();
 
-    final earth = ArCoreNode(
-      image: ArCoreImage(bytes: bytes, width: 500, height: 500),
+    final photo = ArCoreNode(
+      image: ArCoreImage(bytes: bytes, width: 300, height: 300),
       position: hit.pose.translation + vector.Vector3(0.0, 0.0, 0.0),
       rotation: hit.pose.rotation + vector.Vector4(0.0, 0.0, 0.0, 0.0),
     );
 
-    arCoreController?.addArCoreNodeWithAnchor(earth);
+    arCoreController?.addArCoreNodeWithAnchor(photo);
   }
 
   void _handleOnPlaneTap(List<ArCoreHitTestResult> hits) {

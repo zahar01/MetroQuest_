@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:myapp/ar_files/main_ar_page.dart';
+import 'package:myapp/pages/geoposition_waiting.dart';
 import 'package:myapp/pages/welcome_page.dart';
 
 import 'ar_files/image_object.dart';
